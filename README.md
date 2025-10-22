@@ -50,7 +50,7 @@ Dieses Projekt implementiert ein KI-System, das über reine Textverarbeitung hin
 ## Installation & Usage
 ### Voraussetzungen
 ```python
-pip install langchain langchain-community faiss-cpu sentence-transformers pyPDF
+!pip install langchain langchain-community faiss-cpu sentence-transformers pyPDF
 ```
 ### System starten
 # System starten
