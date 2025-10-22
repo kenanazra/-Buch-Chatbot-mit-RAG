@@ -49,12 +49,17 @@ Dieses Projekt implementiert ein KI-System, das über reine Textverarbeitung hin
 
 ## Installation & Usage
 ### Voraussetzungen
+```python
 pip install langchain langchain-community faiss-cpu sentence-transformers pyPDF
+```
 ### System starten
+# System starten
+```python
 from main import initialize_system, run_system_tests
 qa_system = initialize_system()
 antwort = qa_system.answer_question("Was sind die Namen der Ziegen in der Geschichte?")
-print(antwort
+print(antwort)
+```
 ### Beispiel-Fragen
 1.  "Wer ist Peter?" 
 2.  "Beschreibe die Hauptcharaktere" 
