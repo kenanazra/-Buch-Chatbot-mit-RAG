@@ -1,4 +1,4 @@
-# Book Chatbot with RAG Architecture
+# Buch Chatbot mit RAG Architecture
 Ein intelligenter Chatbot, der tiefes inhaltliches Verständnis für literarische Werke demonstriert, entwickelt mit Retrieval-Augmented Generation (RAG).
 # Projektübersicht
 Dieses Projekt implementiert ein KI-System, das über reine Textverarbeitung hinausgeht und tiefes inhaltliches Verständnis für das Buch "Heidi" von Johanna Spyri entwickelt. Das System kann komplexe Fragen zu Charakteren, Handlung, Kapiteln und thematischen Elementen beantworten.
