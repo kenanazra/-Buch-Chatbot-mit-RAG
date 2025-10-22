@@ -4,11 +4,63 @@ Ein intelligenter Chatbot, der tiefes inhaltliches Verständnis für literarisch
 Dieses Projekt implementiert ein KI-System, das über reine Textverarbeitung hinausgeht und tiefes inhaltliches Verständnis für das Buch "Heidi" von Johanna Spyri entwickelt. Das System kann komplexe Fragen zu Charakteren, Handlung, Kapiteln und thematischen Elementen beantworten.
 # Systemarchitektur
 ## Kernkomponenten
-Duale Vektordatenbank: Separate FAISS-Datenbanken für Text-Chunks und komplette Kapitel
+*  Duale Vektordatenbank: Separate FAISS-Datenbanken für Text-Chunks und komplette Kapitel
+*  Intelligente Frageklassifizierung: Automatische Erkennung des Fragetyps für optimierte Antwortstrategien
+*  Semantische Suche: Vektoreinbettungen für bedeutungsbasierte Inhaltsrecherche
+*  Mehrschichtige Verarbeitung: Unterschiedliche Prompt-Strategien basierend auf Fragetyp
 
-Intelligente Frageklassifizierung: Automatische Erkennung des Fragetyps für optimierte Antwortstrategien
+## Entwicklungsschritte
+1.  PDF-Verarbeitung - Textextraktion und -bereinigung
+2.  Kapitelerkennung - Automatische Identifizierung von Kapiteln mit römischen Zahlen
+3.  Semantische Suche - Implementierung von Vektoreinbettungen
+4.  QA-System - Spezialisierte Antwortmechanismen
 
-Semantische Suche: Vektoreinbettungen für bedeutungsbasierte Inhaltsrecherche
+## Technologien & Frameworks
+*  LangChain: RAG-Pipeline, Prompt-Templates und Chain-Konstruktion
+*  FAISS: Hochperformante Vektordatenbank für semantische Suche
+*  HuggingFace Embeddings: Sentence-Transformers für Text-Einbettungen
+*  Ollama mit Llama3.2: Lokales LLM für Sprachgenerierung
 
-Mehrschichtige Verarbeitung: Unterschiedliche Prompt-Strategien basierend auf Fragetyp
+## Textverarbeitung
+*  PyPDFLoader: PDF-Text-Extraktion
+*  RecursiveCharacterTextSplitter: Intelligente Textsegmentierung
+*  Regex-Pattern-Matching: Kapitelerkennung und -verarbeitung
 
+## Datenaufbereitung
+### Textbereinigung
+*  Entfernung überflüssiger Zeilenumbrüche und Leerzeichen
+*  Elimination von Archiv-Wasserzeichen
+*  Bereinigung von Seitenzahlen und Formatierungsartefakten
+### Chunking-Strategie
+*  Feine Chunks: 800 Zeichen mit 120 Zeichen Überlappung
+*  Kapitel-basierte Segmente: Ganze Kapitel als kontextuelle Einheiten
+*  Intelligente Trennung: An natürlichen Textgrenzen (Absätze, Sätze)
+
+## Features
+### Frageklassifizierung
+*  Kapitel-Fragen: Detaillierte Analyse spezifischer Kapitel
+*  Charakter-Fragen: Tiefgehende Charakteranalysen
+*  Zusammenfassungen: Konzise Inhaltsübersichten
+*  Allgemeine Fragen: Umfassende Buchanalyse
+### Intelligente Suche
+*  Automatische Erkennung römischer Zahlen für Kapitelverweise
+*  Dynamische Kontextauswahl basierend auf semantischer Ähnlichkeit
+*  Multi-Level Retrieval (Chunks & Kapitel)
+
+## Installation & Usage
+### Voraussetzungen
+pip install langchain langchain-community faiss-cpu sentence-transformers pyPDF
+### System starten
+from main import initialize_system, run_system_tests
+qa_system = initialize_system()
+antwort = qa_system.answer_question("Was sind die Namen der Ziegen in der Geschichte?")
+print(antwort
+### Beispiel-Fragen
+1.  "Wer ist Peter?" 
+2.  "Beschreibe die Hauptcharaktere" 
+
+3.  "Zusammenfassung von Kapitel II" 
+4.  "Was passiert in CHAPTER III?" 
+
+5.  "Wie entwickelt sich die Beziehung zwischen Heidi und ihrem Großvater?" 
+6.  "Welche Orte besucht Heidi in der Geschichte?" 
