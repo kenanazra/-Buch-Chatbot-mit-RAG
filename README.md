@@ -61,8 +61,14 @@ antwort = qa_system.answer_question("Was sind die Namen der Ziegen in der Geschi
 print(antwort)
 ```
 ### Beispiel-Fragen
-1.  "Who is the author of the book?"
-2.  "What are the names of the goats in the story?"
-3.  "Summarize the events of Chapter II"
-4.  "What happens in Chapter I?"
-5.  "What is the relationship between Heidi and her grandfather?" 
+```python
+    test_questions = [
+       
+  "Who is the author of the book?"
+  "What are the names of the goats in the story?"
+  "Summarize the events of Chapter II"
+  "What happens in Chapter I?"
+  "What is the relationship between Heidi and her grandfather?"
+
+    ]
+'''
