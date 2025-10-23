@@ -61,11 +61,8 @@ antwort = qa_system.answer_question("Was sind die Namen der Ziegen in der Geschi
 print(antwort)
 ```
 ### Beispiel-Fragen
-1.  "Wer ist Peter?" 
-2.  "Beschreibe die Hauptcharaktere" 
-
-3.  "Zusammenfassung von Kapitel II" 
-4.  "Was passiert in CHAPTER III?" 
-
-5.  "Wie entwickelt sich die Beziehung zwischen Heidi und ihrem Großvater?" 
-6.  "Welche Orte besucht Heidi in der Geschichte?" 
+1.  "Who is the author of the book?"
+2.  "What are the names of the goats in the story?"
+3.  "Summarize the events of Chapter II"
+4.  "What happens in Chapter I?"
+5.  "What is the relationship between Heidi and her grandfather?" 
